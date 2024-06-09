@@ -1,6 +1,64 @@
 *{
   border: 0.5px solid blue;
 }
+body{
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+}
+h1{
+  text-align: center;
+}
 #status{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 5px auto;
+}
+.add-book-to-library{
+  width: 120px;
+  height: 60px;
+  margin: 5px auto;
+  border: 1px solid blue;
+  border-radius: 10px;
+  font-size: 1.2em ;
+}
+.add-book{
+  display: block;
+  width: 180px;
+  height: 80px;
+  margin: 20px auto;
+  border: 1px solid blue;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+form{
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+label, input{
+  text-align: center;
+}
+input{
+  border-radius: 10px;
+}
+label{
+  padding-top: 5px;
+  margin: 20px auto 2px auto;
+}
+#pages{
+  margin-bottom: 2px;
+}
+input, #status{
+  box-sizing: border-box;
+  width: 500px;
+  height: 40px;
+}
+#status input, #status label{
+  width: auto;
+  height: auto;
+  margin: auto 1px;
 }
