@@ -1,6 +1,22 @@
-console.log("hello");
+
 const addButton = document.querySelector(".add-book");
-const myLibrary = [];
+const addBook = document.querySelector(".add-book-to-library")
+const dialog = document.querySelector("dialog");
+const closeBtn = document.querySelector("#close-btn");
+
+let myLibrary = [];
+
+addBook.addEventListener("click", () => {
+    addBookToLibrary();
+})
+
+addButton.addEventListener("click", () => {
+    dialog.showModal();
+})
+
+closeBtn.addEventListener("click", () => {
+    dialog.close();
+})
 
 function Book(title, author, pages, readStatus){
     this.title = title;
@@ -18,4 +34,19 @@ function addBookToLibrary(){
     //add book to library
     const newBook = new Book(title, author, pages, readStatus);
     myLibrary.push(newBook);
+}
+
+function readLibrary() {
+    for (let i = 0; i < myLibrary.length(); i++){
+        let myBook = myLibrary[i];
+        let title = myBook.title;
+        let pages = myBook.pages;
+        let author = myBook.author;
+        let readStatus = myBook.readStatus;
+        showLibrary(title, author, pages, readStatus);
+    }
+}
+
+function showLibrary(title, author, pages, status){
+    // do something to show the library in the DOM
 }
