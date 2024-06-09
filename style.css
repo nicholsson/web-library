@@ -1,13 +1,17 @@
-*{
-  border: 0.5px solid blue;
-}
 body{
+  font-family: 'Roboto';
   height: 100vh;
   width: 100vw;
   margin: 0px;
 }
+button, .book{
+  transition: transform 0.3s ease;
+}
 h1{
   text-align: center;
+  font-size: 2em;
+  font-weight: 500;
+  color: rgb(62, 62, 62);
 }
 #status{
   display: flex;
@@ -19,21 +23,31 @@ h1{
   width: 120px;
   height: 60px;
   margin: 5px auto;
-  border: 1px solid blue;
   border-radius: 10px;
   font-size: 1.2em ;
+  background-color: #3AA6B9;
+  color: white;
+  text-shadow: 1px 1px rgb(109, 106, 106);
+  border: 1px solid #3AA6B9;
+  box-shadow: 3.5px 5.0px 5.0px #2c8e9f;
 }
 .add-book{
   display: block;
   width: 180px;
   height: 80px;
   margin: 20px auto;
-  border: 1px solid blue;
   border-radius: 10px;
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 500;
+  color: white;
+  background-color: #FF9EAA;
+  text-shadow: 1px 1px rgb(109, 106, 106);
+  border: 1px solid #FF9EAA;
+  box-shadow: 3.5px 5.0px 5.0px #c7838b;
 }
 form{
+  width: 540px;
+  height: 420px;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
@@ -44,8 +58,13 @@ label, input{
 }
 input{
   border-radius: 10px;
+  border: 0.2px solid grey;
+  box-shadow: 2.5px 3px 8px grey;
 }
 label{
+  font-size: 1.2em;
+  font-weight: 300;
+  color: rgb(62, 62, 62);
   padding-top: 5px;
   margin: 20px auto 2px auto;
 }
@@ -60,5 +79,50 @@ input, #status{
 #status input, #status label{
   width: auto;
   height: auto;
-  margin: auto 1px;
+  margin: auto 5px;
+}
+
+.books-container{
+  display: flex;
+  justify-content: flex-start;
+}
+.book{
+  box-sizing: border-box;
+  height: 300px;
+  width: 500px;
+  border: 1px solid #FF9EAA;
+  border-radius: 10px;
+  box-shadow: 3.5px 5.0px 5.0px #c7838b;
+  margin: 10px 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.book p{
+  font-size: 1.2em;
+  font-weight: 300;
+  color: rgb(62, 62, 62);
+}
+button:hover, .book:hover{
+  transform: scale(1.05);
+}
+dialog{
+  border: 1px solid #3AA6B9;
+  box-shadow: 4.5px 9.0px 9.0px #2c8e9f;
+  border-radius: 10px;
+}
+#close-btn{
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  top: 10px;
+  right: 35px;
+  background-color: #FF9EAA;
+  text-shadow: 1px 1px rgb(109, 106, 106);
+  border: 1px solid #FF9EAA;
+  box-shadow: 3.5px 5.0px 5.0px #c7838b;
+  border-radius: 10px;
+  color: white;
+  font-size: 1em;
 }
