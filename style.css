@@ -35,7 +35,7 @@ h1{
   display: block;
   width: 180px;
   height: 80px;
-  margin: 20px auto;
+  margin: 80px auto;
   border-radius: 10px;
   font-size: 1.2em;
   font-weight: 500;
@@ -85,19 +85,21 @@ input, #status{
 .books-container{
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .book{
   box-sizing: border-box;
-  height: 300px;
-  width: 500px;
+  height: 400px;
+  width: 450px;
   border: 1px solid #FF9EAA;
   border-radius: 10px;
   box-shadow: 3.5px 5.0px 5.0px #c7838b;
-  margin: 10px 25px;
-  text-align: center;
+  margin: 20px 15px;
+  
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 .book p{
   font-size: 1.2em;
@@ -125,4 +127,26 @@ dialog{
   border-radius: 10px;
   color: white;
   font-size: 1em;
+}
+.delete-book{
+  margin-bottom: 10px;
+  width: 80px;
+  height: 30px;
+  background-color: #3AA6B9;
+  text-shadow: 1px 1px rgb(109, 106, 106);
+  border: 1px solid #3AA6B9;
+  box-shadow: 3.5px 5.0px 5.0px #2c8e9f;
+  border-radius: 10px;
+  color: white;
+  font-size: 1em;
+}
+.changeStatus{
+  width: 120px;
+  height: 30px;
+  background-color: #FF9EAA;
+  text-shadow: 1px 1px rgb(109, 106, 106);
+  box-shadow: 3.5px 5.0px 5.0px #c7838b;
+  border: 1px solid #FF9EAA;
+  border-radius: 10px;
+  color: white;
 }
